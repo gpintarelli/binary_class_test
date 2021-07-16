@@ -448,6 +448,8 @@ We add a 'stacking' model to be evaluated.
 The function `get_models` is changed
 
 The stacking method could be better optimize to test all available model combination possibilities (not done yet!). We tested the some of the combinations and we identify that the KNN+BAYES was the best performing.
+
+We did not test further level1 models. We used the Logistic Regression due to simplicity.
 """
 
 from sklearn.ensemble import StackingClassifier
@@ -513,7 +515,7 @@ for i in range(15):
 # Test single data:
 data = [[1,2,3,1,2,3,1,2,3,1,2,3,1,2]]
 yhat = model.predict(data)
-print("Predicted Class:", yhat)
+print("Predicted Class Single data:", yhat)
 
 """# Refs links for coding
 
